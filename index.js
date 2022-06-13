@@ -1,12 +1,22 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-//Set up routes
+//Initialise express server
 const app = express();
 
-app
-  .get("/", (req, res) => {
-    res.send("Hello word");
-  })
-  .listen(5000, console.log("Server running on port 5000!"));
+// Setting and using middlewares
+app.use(bodyParser.json({ limit: "20mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
+dotenv.config();
+
+//Connect Db
+mongoose
+  .connect(process.env.MONGO_DB)
+  .then(() =>
+    app.listen(process.env.PORT, () =>
+      console.log(`Server running on port ${processs.env.PORT}`)
+    )
+  );
+//Set up routes
