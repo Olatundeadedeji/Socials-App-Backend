@@ -2,11 +2,12 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import AuthenticationRoute from "./routes/AuthenticationRoute.js";
 
 //Initialise express server
 const app = express();
 
-// Setting and using middlewares
+// Setting up and using middlewares
 app.use(bodyParser.json({ limit: "20mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "20mb", extended: true }));
 dotenv.config();
@@ -20,4 +21,6 @@ mongoose
     )
   )
   .catch((error) => console.log(error));
+
 //Set up routes
+app.use("/auth", AuthenticationRoute);

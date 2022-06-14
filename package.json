@@ -33,8 +33,8 @@
     "nodemon": "^2.0.16"
   },
   "_moduleAliases": {
-    "@/models": "src/models",
-    "@/controllers": "src/controllers",
-    "@/routes": "src/routes"
+    "@/models": "./src/models",
+    "@/controllers": "./src/controllers",
+    "@/routes": "./src/routes"
   }
 }
