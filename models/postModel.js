@@ -1,10 +1,16 @@
-import express from "express";
-const router = express.Router();
+import mongoose from "mongoose";
 
-router.post("/", createPost);
-router.get("/:id", retrivePost);
-router.put("/:id", updatePost);
-router.delete("/:id", deletePost);
-router.put("/:id/like", likePost);
-router.get("/:id/timeline", getTimelinePosts);
-export default router;
+const postSchema = mongoose.Schema(
+  {
+    userId: { type: String, required: true },
+    description: String,
+    likes: [],
+    image: String,
+  },
+  {
+    timestamps: true,
+  }
+);
+
+var PostModel = mongoose.model("Posts", postSchema);
+export default PostModel;
