@@ -1,4 +1,12 @@
 import express from "express";
+import {
+  createPost,
+  deletePost,
+  retrivePost,
+  getTimelinePosts,
+  likePost,
+  updatePost,
+} from "../controllers/PostController.js";
 const router = express.Router();
 
 router.post("/", createPost);
