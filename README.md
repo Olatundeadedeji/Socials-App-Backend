@@ -1,3 +1,3 @@
-# A community of chess players
+# A Community of Chess Players
 
 
