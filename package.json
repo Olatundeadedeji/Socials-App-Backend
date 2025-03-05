@@ -1,37 +1,41 @@
 {
-  "name": "chess-socials",
-  "version": "1.0.0",
-  "description": "A community of chess players",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Olatundeadedeji/Socials-App-Backend.git"
-  },
-  "keywords": [
-    "chess",
-    "social",
-    "networks",
-    "community"
-  ],
-  "author": "Olatunde Adedeji",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Olatundeadedeji/Socials-App-Backend/issues"
-  },
-  "homepage": "https://github.com/Olatundeadedeji/Socials-App-Backend#readme",
-  "dependencies": {
-    "bcrypt": "^5.0.1",
-    "body-parser": "^1.20.0",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "mongoose": "^6.3.6",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.16",
-    "winston": "^3.7.2"
-  }
+    "name": "chess-socials",
+    "version": "1.0.0",
+    "description": "A community of chess players",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Olatundeadedeji/Socials-App-Backend.git"
+    },
+    "keywords": [
+        "chess",
+        "social",
+        "networks",
+        "community"
+    ],
+    "author": "Olatunde Adedeji",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Olatundeadedeji/Socials-App-Backend/issues"
+    },
+    "homepage": "https://github.com/Olatundeadedeji/Socials-App-Backend#readme",
+    "dependencies": {
+        "axios": "^1.4.0",
+        "bcrypt": "^5.0.1",
+        "body-parser": "^1.20.0",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^6.3.6",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.16",
+        "passport": "^0.6.0",
+        "passport-oauth2": "^1.7.0",
+        "winston": "^3.7.2"
+    }
 }
